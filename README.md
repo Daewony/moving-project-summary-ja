@@ -73,25 +73,33 @@
 ## 🧱 データベース設計（ERD）
 
 ### ① ユーザー・業者関連
-![ERD User](<img width="3362" height="830" alt="image" src="https://github.com/user-attachments/assets/c6aa075d-2a99-4909-bb72-4452e38f643d" />)
+![ERD User](https://github.com/user-attachments/assets/c6aa075d-2a99-4909-bb72-4452e38f643d)
 
 ユーザーを基準に、顧客プロフィールと業者プロフィールを分離し、
 お気に入り機能も独立したテーブルで管理しました。
 
-### 見積依頼関連
-![ERD Quote Request](<img width="1430" height="434" alt="image" src="https://github.com/user-attachments/assets/3f0261a1-7a59-4568-8c68-b4b589d2c2ec" />)
+---
+
+### ② 見積依頼関連
+![ERD Quote Request](https://github.com/user-attachments/assets/3f0261a1-7a59-4568-8c68-b4b589d2c2ec)
 
 見積依頼を中心に、出発地・到着地・ステータス履歴を管理する構造で設計しました。
 
+---
+
 ### ③ 見積フロー関連
-![ERD Quote Flow](<img width="2646" height="900" alt="image" src="https://github.com/user-attachments/assets/d46aa66a-5a24-475a-8a7d-e42c318a1468" />)
+![ERD Quote Flow](https://github.com/user-attachments/assets/d46aa66a-5a24-475a-8a7d-e42c318a1468)
 
 見積依頼（QuoteRequest）を起点に、住所情報、状態履歴、指定見積依頼、業者見積、最終マッチングまでを
-一連の流れとして管理する構造で設計しました。
+一連の流れとして管理する構造で設計しました。  
 特に、QuoteStatusHistory によって状態遷移を履歴として管理できるようにした点を重視しました。
 
-### 全体構造
-![ERD Full](<img width="5570" height="2022" alt="image" src="https://github.com/user-attachments/assets/2242a4ab-d1e7-49bf-837c-ae17cd4bcb70" />)
+**（見積依頼 → 見積 → マッチングまでのビジネスフローを中心に設計）**
+
+---
+
+### ④ 全体構造
+![ERD Full](https://github.com/user-attachments/assets/2242a4ab-d1e7-49bf-837c-ae17cd4bcb70)
 
 全体のテーブル関係を俯瞰した構造です。
 
