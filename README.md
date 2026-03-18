@@ -1,6 +1,3 @@
-<img width="3450" height="1942" alt="image" src="https://github.com/user-attachments/assets/0c478e9e-1d93-454d-b2ec-3edd15ed6b4c" /># moving-project-summary-ja
-バックエンドを中心に開発した引越しマッチングサービスのプロジェクト概要
-
 # 引越しマッチングサービス「Moving」プロジェクト概要
 
 9人チームで開発した、引越し希望者と業者をつなぐO2Oプラットフォームです。  
@@ -43,24 +40,30 @@
 ## 🖥 実装画面
 
 ### ① 見積依頼開始（ユーザー側）
-![見積依頼開始](<img width="3450" height="1942" alt="image" src="https://github.com/user-attachments/assets/97c0a6c0-5c52-43b2-bcf9-8a8cdf0c8318" />)
+![見積依頼開始](https://github.com/user-attachments/assets/97c0a6c0-5c52-43b2-bcf9-8a8cdf0c8318)
 
 ユーザーが引越し条件を入力し、見積依頼フローを開始する画面です。
 
+---
+
 ### ② 見積依頼確認・送信
-![見積依頼確認](<img width="3448" height="1944" alt="image" src="https://github.com/user-attachments/assets/0d7c3a60-c78f-44bb-845a-380b6622ec17" />)
+![見積依頼確認](https://github.com/user-attachments/assets/0d7c3a60-c78f-44bb-845a-380b6622ec17)
 
 入力内容を確認して見積依頼を確定する画面です。  
 バックエンドでは入力値の検証と見積状態の制御を行いました。
 
+---
+
 ### ③ 見積依頼一覧（業者側）
-![見積依頼一覧](<img width="1731" height="972" alt="image" src="https://github.com/user-attachments/assets/fa4a26b4-503e-4750-832e-0acfc2003c3e" />)
+![見積依頼一覧](https://github.com/user-attachments/assets/fa4a26b4-503e-4750-832e-0acfc2003c3e)
 
 業者が受信した見積依頼を確認する画面です。  
 条件に応じた一覧表示や、依頼内容の把握をしやすい形を意識しました。
 
+---
+
 ### ④ 見積送信機能
-![見積送信](<img width="1728" height="974" alt="image" src="https://github.com/user-attachments/assets/2465587e-c309-4ee1-b4ab-10058d246003" />)
+![見積送信](https://github.com/user-attachments/assets/2465587e-c309-4ee1-b4ab-10058d246003)
 
 業者が見積金額とコメントを入力して送信する画面です。  
 重複見積防止や、見積送信と通知送信の整合性を意識して実装しました。
