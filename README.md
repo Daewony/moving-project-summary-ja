@@ -8,7 +8,9 @@
 ## 📌 プロジェクト概要
 - 開発期間: 2025.02.18 ~ 2025.04.10  
 - チーム構成: 9名（Backend 3名 / Frontend 6名）  
-- 目的: 見積価格の不透明性を解消し、合理的なマッチングを実現  
+- 目的: 見積価格の不透明性を解消し、合理的なマッチングを実現
+- デモ動画:  
+https://www.youtube.com/watch?v=h_GFQlqz8uI
 
 ---
 
@@ -33,7 +35,7 @@
 - ERD設計・データベース設計  
 - 見積依頼フローのAPI設計・実装  
 - ユーザー / 業者ごとのエンドポイント分離設計  
-- 一部フロントエンド実装
+- 見積依頼・見積一覧画面など一部フロントエンド実装
 
 ---
 
@@ -83,7 +85,7 @@
 ### ② 見積依頼関連
 ![ERD Quote Request](https://github.com/user-attachments/assets/3f0261a1-7a59-4568-8c68-b4b589d2c2ec)
 
-見積依頼を中心に、出発地・到着地・ステータス履歴を管理する構造で設計しました。
+見積依頼を中心に、出発地・到着地・予定日時・現在状態を管理する構造で設計しました。
 
 ---
 
@@ -92,9 +94,11 @@
 
 見積依頼（QuoteRequest）を起点に、住所情報、状態履歴、指定見積依頼、業者見積、最終マッチングまでを
 一連の流れとして管理する構造で設計しました。  
-特に、QuoteStatusHistory によって状態遷移を履歴として管理できるようにした点を重視しました。
 
 **（見積依頼 → 見積 → マッチングまでのビジネスフローを中心に設計）**
+
+特に、QuoteStatusHistory を用いて見積状態を履歴として管理することで、
+状態遷移の整合性とトラッキングを両立しました。
 
 ---
 
@@ -102,6 +106,7 @@
 ![ERD Full](https://github.com/user-attachments/assets/2242a4ab-d1e7-49bf-837c-ae17cd4bcb70)
 
 全体のテーブル関係を俯瞰した構造です。
+（※詳細は下記リンクから拡大して確認できます）
 
 詳細なERDはこちら  
 https://www.erdcloud.com/d/tSXQkMbPGrZthuhzi
@@ -113,7 +118,8 @@ https://www.erdcloud.com/d/tSXQkMbPGrZthuhzi
 - 見積提出 API  
 - マッチング処理 API  
 - 重複見積防止ロジック  
-- ステータス管理（進行中 / 完了 / キャンセル）  
+- ステータス管理（進行中 / 完了 / キャンセル）
+- 指定見積依頼・拒否処理
 
 ---
 
@@ -141,6 +147,9 @@ https://www.erdcloud.com/d/tSXQkMbPGrZthuhzi
 ---
 
 ## 🔗 Links
+- Demo Video  
+https://www.youtube.com/watch?v=h_GFQlqz8uI
+
 - Backend Repository  
 https://github.com/sprint-fs-3-part4-team2/fs3-moving-team2-BE  
 
