@@ -5,6 +5,14 @@
 
 ---
 
+## 👀 見てほしいポイント
+
+- 一般依頼と指定依頼で異なる見積フローを整理し、`QuoteStatusHistory` による状態履歴管理として設計した点
+- 業者一覧でよく使われる平均評価やレビュー数などの集計値を `Mover` に保持し、読み取り性能を意識した点
+- 見積提出と通知送信を1つのトランザクションで処理し、データ不整合を防止した点
+
+---
+
 ## 📌 プロジェクト概要
 - 開発期間: 2025.02.18 ~ 2025.04.10  
 - チーム構成: 9名（Backend 3名 / Frontend 6名）  
@@ -127,6 +135,7 @@ https://www.erdcloud.com/d/tSXQkMbPGrZthuhzi
 - 見積提出と通知送信を1つのトランザクションで処理し、データ不整合を防止  
 - ステータスに応じた見積作成制御によりビジネスロジックの整合性を担保  
 - RESTful設計に基づき、ユーザーと業者の責務を分離  
+- 業者一覧で利用される平均評価・レビュー数・お気に入り数などの集計値を `Mover` テーブルに保持し、一覧表示時の読み取り性能を意識
 
 ---
 
@@ -152,6 +161,9 @@ https://www.youtube.com/watch?v=h_GFQlqz8uI
 
 - Backend Repository  
 https://github.com/sprint-fs-3-part4-team2/fs3-moving-team2-BE  
+
+- Prisma Schema  
+https://github.com/sprint-fs-3-part4-team2/fs3-moving-team2-BE/blob/main/prisma/schema/schema.prisma
 
 - Frontend Repository  
 https://github.com/sprint-fs-3-part4-team2/fs3-moving-team2-FE  
